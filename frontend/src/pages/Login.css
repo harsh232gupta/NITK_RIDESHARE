@@ -1,0 +1,147 @@
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(to right, #dfbc98, #da2d2d);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Left side */
+.login-left {
+  flex: 1;
+  background: linear-gradient(to bottom right, #29a2df, #2980b9);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.login-left h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.login-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.login-left ul {
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* Right side */
+.login-right {
+  flex: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  /* ✅ Background Image */
+  background: url("nitk.jpeg") no-repeat center center/cover;
+  position: relative;
+}
+
+/* Overlay (optional, to dim the image for readability) */
+.login-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(103, 87, 67, 0.7); 
+  z-index: 1;
+}
+
+/* Login card */
+.login-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  z-index: 1; /* ensures it's above overlay */
+}
+
+.login-section h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.input-group input {
+  padding: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+  border-color: #62b3e9;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+.signup-link a {
+  color: #2980b9;
+  font-weight: 600;
+  text-decoration: none;
+}
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .login-container {
+    flex-direction: column;
+  }
+  .login-left {
+    padding: 2rem;
+    text-align: center;
+  }
+  .login-right {
+    background-position: center;
+  }
+}
