@@ -223,7 +223,7 @@ const SearchRides = () => {
 
         try {
             const response = await fetch(
-                `http://localhost:8080/api/rides/search?date=${searchData.date}&time=${searchData.time}&from=${searchData.from}&to=${searchData.to}`,
+                `${process.env.REACT_APP_API_URL}/api/rides/search?date=${searchData.date}&time=${searchData.time}&from=${searchData.from}&to=${searchData.to}`,
                 { headers: { 'Authorization': localStorage.getItem('token') } }
             );
             const result = await response.json();
