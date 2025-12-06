@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const allowedOrigins = [
   'http://localhost:3000',                // dev
-  'https://your-frontend.vercel.app'      // replace later with real Vercel URL
+  'https://nitk-rideshare.vercel.app'      // replace later with real Vercel URL
 ];
 
 app.use(cors({
