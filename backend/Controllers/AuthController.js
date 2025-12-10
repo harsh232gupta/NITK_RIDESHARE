@@ -40,14 +40,6 @@ const signup = async (req, res) => {
             });
         }
 
-        // 🔹 Validate phone number if provided (Must be exactly 10 digits)
-        if (phone && !/^\d{10}$/.test(phone)) {
-            return res.status(400).json({ 
-                message: 'Phone number must be 10 digits', 
-                success: false 
-            });
-        }
-
         // 🔹 Hash password
         const hashedPassword = await bcrypt.hash(password, 10);
 
