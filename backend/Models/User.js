@@ -25,8 +25,7 @@ const UserSchema = new Schema({
     },
     phone: {
         type: String,
-        required: false,
-        match: [/^\d{10}$/, 'Phone number must be 10 digits']
+        required: false
     },
     telegram: {
         type: String,
