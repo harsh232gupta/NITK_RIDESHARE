@@ -7,7 +7,7 @@ const rideSchema = new mongoose.Schema({
     date: { type: String, required: true },       // Date of the ride
     time: { type: String, required: true },       // Time of the ride
     userName: { type: String, required: true },   // User Name from login info
-    phoneNumber: { type: String, required: true }, // Phone Number from login info
+    phoneNumber: { type: String, required: false }, // Phone Number from login info
     email: { type: String, required: true },      // Email from login info
     telegram: { type: String, required: false },  // Optional Telegram username
     gender: { type: String, required: true }      // Gender from login info
